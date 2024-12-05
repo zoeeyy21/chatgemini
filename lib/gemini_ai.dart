@@ -20,7 +20,10 @@ class _GeminiChatBotState extends State<GeminiChatBot> {
   Future<void> sendMessage() async {
     final message = promptControl.text; // Fixed variable name
     setState(() {
-      prompt.add(ModelMessage(isPrompt: isPrompt, message: message, time: DateTime.now())); // Fixed message and added time
+      prompt.add(ModelMessage(
+          isPrompt: isPrompt,
+          message: message,
+          time: DateTime.now())); // Fixed message and added time
     });
     promptControl.clear(); // Clear the input after sending
   }
